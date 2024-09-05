@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="cover">
+        
+    </div>
+    <div id="container">
+ <div class="circle" style="--i:0;"></div>
+<div class="circle" style="--i:1;"></div>
+<div class="circle" style="--i:2;"></div>
+<div class="circle" style="--i:3;"></div>
+<div class="circle" style="--i:4;"></div>
+<div class="circle" style="--i:5;"></div>
+<div class="circle" style="--i:6;"></div>
+<div class="circle" style="--i:7;"></div>
+<div class="circle" style="--i:8;"></div>
+<div class="circle" style="--i:9;"></div>
+<div class="circle" style="--i:10;"></div>
+<div class="circle" style="--i:11;"></div>
+<div class="circle" style="--i:12;"></div>
+<div class="circle" style="--i:13;"></div>
+<div class="circle" style="--i:14;"></div>
+<div class="circle" style="--i:15;"></div>
+<div class="circle" style="--i:16;"></div>
+<div class="circle" style="--i:17;"></div>
+<div class="circle" style="--i:18;"></div>
+<div class="circle" style="--i:19;"></div>
+<div class="circle" style="--i:20;"></div>
+<br>
+<br>
+<br>
+<a>Loading...</a>
+</div>
+    <main>
+        <section id="signup">
+            <div class="top">
+       <img src="W-images/icon.png" alt="">&nbsp &nbsp 
+       <h1>Wealth~ <span>Wave</span></h1> 
+            </div>
+       <br>
+            <form>
+                
+   
+ <input type="text" id="firstname" placeholder="First name"required>
+         
+         
+ <input type="email" id="email" placeholder="Last name"required>
+
+        
+ <input type="password" id="password" placeholder="Create password" required>
+
+ <input type="number" id="phone" placeholder="+234" required>
+ 
+            
+                
+              
+           &nbsp &nbsp   &nbsp &nbsp <button id="up" onclick="signUp()" >Sign Up</button>   
+              
+               
+               <button id="in" onclick="signUp()" >Sign in</button>   
+              
+               
+            </form>
+        </section>
+    </main>
+
+    
+
+    <script src="scripts.js"></script>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#cover{
+    background:#f9f9f9;
+    opacity:0.8;
+    height:100vh;
+    width:100%;
+    position: absolute;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+#signup {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+label {
+    font-weight: bold;
+}
+#in{
+    border:2px solid #15b6ff;
+    background:white;
+    color: black;
+    font-weight:bold;
+   
+}
+#up{
+    border:2px solid #15b6ff;
+    background:#15b6ff;
+    font-weight:bold;
+}
+
+input {
+    width: 100%;
+    
+    padding: 0.5rem;
+    border: 1px solid #15b6ff;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgb(124, 124, 124),inset 0 0 15px rgb(124, 124, 124);
+    height:34px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+span{
+    color:#15b6ff;
+}
+
+
+  section img{
+      width:100px;
+      border-radius:100%;
+      margin-left:-3%;
+  }  
+  a{
+      text-decoration:none;
+  }
+.top{
+    display:flex;
+    align-items:center;
+}
+
+
+
+
+
+
+#container{
+position: absolute;
+top:30%;
+left:23%;
+height:30px;
+display: flex;
+justify-content: center;
+align-items: center;
+background:#032B44;
+height:110px;
+padding-top:30%;
+
+width:224px;
+border-radius:12px;
+color:white;
+transition: opacity 1s ease;
+opacity:;
+}
+
+
+
+
+
+.circle{
+position: absolute;
+background-color: transparent;
+width: calc(var(--i) * 2.5vmin);
+aspect-ratio: 1;
+border-radius: 50%;
+border: 3px solid rgb(0,255,13);
+transform-style:preserve-3d;
+transform: rotateX(70deg) translateZ(50px);
+animation:animate 3s ease-in-out calc(var(--i) *0.1s)infinite;
+box-shadow: 0 0 15px rgb(124, 124, 124),inset 0 0 15px rgb(124, 124, 124);
+}
+
+@keyframes animate {
+0%,
+100% {
+transform: rotateX(70deg) translateZ(50px) translateY(0);
+filter: hue-rotate(0);
+}
+
+50% {
+transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
+filter: hue-rotate(360deg);
+
+
+
+}
+
+
+ 
+    </style>
+    <script>
+      function signUp() {
+            const username = document.getElementById('firstname').value;
+            const password = document.getElementById('password').value;
+            const coupon = document.getElementById('coupon').value;
+
+            if (coupon === '404081') {
+                localStorage.setItem('username', username);
+                localStorage.setItem('password', password);
+                window.location.href = 'homepage.html';
+            }
+            else if(username === ''){
+                alert('Please fill in all the requirements');
+            }
+            else if(password === ''){
+                alert('Please fill in all the requirements');
+            }
+            else if(email === ''){
+                alert('Please fill in all the requirements');
+            }
+             else if(coupon === ''){
+                alert('Please fill in all the requirements');
+            }
+            
+             else {
+                alert('Invalid coupon code!');
+                window.location.href = 'index.html';
+            }
+        }
+        
+      
+      
+      
+      function fadeInDiv() {
+const fadeBox = document.getElementById("container");
+fadeBox.style.opacity = 1; // Set the opacity to 1 to fade in the div
+setTimeout(hide,8000)
+        }
+      
+   
+    </script>
+</body>
+</html>
